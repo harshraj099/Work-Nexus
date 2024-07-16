@@ -114,11 +114,11 @@ nav .menu button {
 }
 nav .menu button:hover {
   color: #f1f3f6;
-  background: #184235;
+  background:  #4983d5;
   transition: all 0.3s;
   cursor: pointer;
   font-weight: 500;
-  border: 1px solid #184235;
+  border: 1px solid #4983d5;
 }
 nav .menu li a {
   color: #f1f3f6;
@@ -128,13 +128,13 @@ nav .menu li a {
   position: relative;
 }
 nav .menu li a:hover {
-  color: #2d5649;
+  color:  #a3d0ff;
   transition: all 0.3s;
 }
 nav .menu li a::before {
   content: "";
   position: absolute;
-  background: #184235;
+  background:  #a3d0ff;
   height: 1px;
   width: 100%;
   left: -100%;
@@ -204,12 +204,12 @@ nav .hamburger {
     -moz-box-shadow: 9px 0px 16px 0px rgba(5, 15, 85, 0.75);
   }
   nav .show-menu li a {
-    color: #184235;
+    color: #4983d5;
     font-weight: 600;
   }
   nav .show-menu button {
-    color: #184235;
-    border: 1px solid #184235;
+    color:  #4983d5;
+    border: 1px solid  #4983d5;
     font-weight: 600;
   }
   nav .show-menu button:hover {
@@ -245,7 +245,7 @@ nav .hamburger {
   color: #f1f3f6;
 }
 .footerShow div a:hover {
-  color: #2d5649;
+  color: #4983d5;
   transform: scale(1.2);
   transition: all 0.3s;
 }
@@ -371,7 +371,7 @@ nav .hamburger {
   font-weight: 400;
 }
 .jobDetail .container .banner a {
-  background-color: #2d5649;
+  background-color:  #4983d5;
   color: rgb(233, 249, 255);
   font-size: 20px;
   font-weight: 400;

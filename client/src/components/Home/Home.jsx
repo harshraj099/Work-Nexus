@@ -15,10 +15,10 @@ const Home = () => {
   return (
     <>
       <section className="homePage page">
-        <HeroSection />
-        <HowItWorks />
-        <PopularCategories />
+       <HowItWorks />
+       <PopularCategories />
         <PopularCompanies />
+        <HeroSection />
       </section>
     </>
   );

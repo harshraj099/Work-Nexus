@@ -32,12 +32,10 @@ const HeroSection = () => {
     <div className="flex flex-col py-10 bg-[#D6EAF8]">
       <div className="container mx-auto flex w-full h-[450px] mb-7 gap-8">
         <div className="title flex flex-col justify-center flex-1">
-          <h1>Find a job that suits</h1>
-          <h1>your interests and skills</h1>
+          <h1>Work Wagon: </h1>
+          <h4>Bridging Talent and Opportunity—Empowering Job Seekers and Employers Alike!</h4>
           <p className="mt-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            voluptate repellat modi quidem aliquid eaque ducimus ipsa et, facere
-            mollitia!
+          Work Wagon aims to simplify the job search process, making it easier for individuals to find suitable job opportunities and for employers to connect with qualified candidates. The platform combines advanced search features with a user-friendly design to create an efficient job search experience.
           </p>
         </div>
         <div className="image flex-1 overflow-hidden">
