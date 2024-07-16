@@ -86,45 +86,47 @@ const Application = () => {
     );
   };
 
-
   return (
-    <section className="application flex flex-col bg-[#D6EAF8]">
-      <div className="container min-w-[1500px] max-w-[1500px] mx-auto flex flex-col text-center py-12 px-5">
-        <h3 className="text-5xl font-bold mb-2">Application Form</h3>
-        <form onSubmit={handleApplication} className="flex flex-col w-[550px] py-10 px-5 gap-6 mt-9 mx-auto">
-          <input className="border border-[#2a89c0] text-lg py-3 px-1.5 bg-[#D6EAF8]"
+    <section className="application flex flex-col bg-[#D6EAF8] pt-24 md:pt-5">
+      <div className="container mx-auto px-4 py-12 flex flex-col text-center">
+        <h3 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-6">APPLICATION FORM</h3>
+        <form
+          onSubmit={handleApplication}
+          className="flex flex-col w-full max-w-md mx-auto py-10 px-4 gap-6"
+        >
+          <input
+            className="border border-[#2a89c0] text-lg py-3 px-2 bg-[#D6EAF8] rounded"
             type="text"
             placeholder="Your Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            
           />
           <input
             type="email"
             placeholder="Your Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="border border-[#2a89c0] text-lg py-3 px-1.5 bg-[#D6EAF8]"
+            className="border border-[#2a89c0] text-lg py-3 px-2 bg-[#D6EAF8] rounded"
           />
           <input
-            type="number"
+            type="tel"
             placeholder="Your Phone Number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-            className="border border-[#2a89c0] text-lg py-3 px-1.5 bg-[#D6EAF8]"
+            className="border border-[#2a89c0] text-lg py-3 px-2 bg-[#D6EAF8] rounded"
           />
           <input
             type="text"
             placeholder="Your Address"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
-            className="border border-[#2a89c0] text-lg py-3 px-1.5 bg-[#D6EAF8]"
+            className="border border-[#2a89c0] text-lg py-3 px-2 bg-[#D6EAF8] rounded"
           />
           <textarea
-            placeholder="Cover Letter(min 50 characters)..."
+            placeholder="Cover Letter (min 50 characters)..."
             value={coverLetter}
             onChange={(e) => setCoverLetter(e.target.value)}
-            className="w-full h-42 text-lg bg-[#D6EAF8] border border-[#2a89c0]"
+            className="w-full h-32 text-lg bg-[#D6EAF8] border border-[#2a89c0] rounded"
           />
           <div className="text-left">
             <label className="block text-lg mb-2">Select Resume</label>
@@ -136,8 +138,8 @@ const Application = () => {
             />
           </div>
           <div className="grid min-h-[60px] place-content-center bg-[#02113f] p-4 text-2xl">
-              <DrawOutlineButton type="submit">Send Application</DrawOutlineButton>
-            </div>
+            <DrawOutlineButton type="submit">Send Application</DrawOutlineButton>
+          </div>
         </form>
       </div>
     </section>

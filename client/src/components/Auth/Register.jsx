@@ -31,7 +31,7 @@ const AuroraHero = ({ children }) => {
       style={{
         backgroundImage,
       }}
-      className="relative grid min-h-screen overflow-hidden pl-80"
+      className="relative grid min-h-screen overflow-hidden lg:pl-80"
     >
       <div className="relative z-10">
         {children}
@@ -52,7 +52,6 @@ const Register = () => {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
- 
 
   const { isAuthorized, setIsAuthorized } = useContext(Context);
 
@@ -86,8 +85,8 @@ const Register = () => {
 
   return (
     <AuroraHero>
-      <div className="flex gap-10 pl-20">
-        <div className="flex flex-col p-5 pl-10 mt-5 ml-20 mb-10 h-1/3 w-[40%]">
+      <div className="flex flex-col lg:flex-row gap-10 lg:pl-20 p-4 lg:p-0">
+        <div className="flex flex-col p-5 lg:pl-10 mt-5 lg:ml-20 mb-10 h-1/3 w-full lg:w-[40%]">
           <div className="flex flex-col mb-5 text-center">
             <img src="/logo.png" alt="logo" className="w-[120px] h-[120px] mx-auto" />
             <h2 className="text-3xl font-bold text-yellow-400">Create a new account</h2>
@@ -116,7 +115,7 @@ const Register = () => {
                   placeholder="Your name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="bg-transparent py-4 px-3 border-none w-full text-2xl  text-white"
+                  className="bg-transparent py-4 px-3 border-none w-full text-2xl text-white"
                 />
                 <FaPencilAlt className="text-white text-6xl rounded-sm p-2" />
               </div>
@@ -129,7 +128,7 @@ const Register = () => {
                   placeholder="xyz@gmail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="bg-transparent py-4 px-3 border-none w-full text-2xl  text-white"
+                  className="bg-transparent py-4 px-3 border-none w-full text-2xl text-white"
                 />
                 <MdOutlineMailOutline className="text-white text-6xl rounded-sm p-2" />
               </div>
@@ -142,7 +141,7 @@ const Register = () => {
                   placeholder="12345678"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="bg-transparent py-4 px-3 border-none w-full text-2xl  text-white"
+                  className="bg-transparent py-4 px-3 border-none w-full text-2xl text-white"
                 />
                 <FaPhoneVolume className="text-white text-6xl rounded-sm p-2" />
               </div>
@@ -155,27 +154,27 @@ const Register = () => {
                   placeholder="Your Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="bg-transparent py-4 px-3 border-none w-full text-2xl  text-white"
+                  className="bg-transparent py-4 px-3 border-none w-full text-2xl text-white"
                 />
                 <RiLock2Fill className="text-white text-6xl rounded-sm p-2" />
               </div>
             </div>
-            </form>
-              <div className="flex gap-4 mt-6">
-              <button onClick={handleRegister}
-                type="submit"
-                className="py-3 text-3xl text-center border-none font-bold text-white bg-[#191771] rounded-lg w-1/2"
-              >
-                Register
-              </button>
-              <Link
-                to={"/login"}
-                className="py-3 text-3xl text-center border-none font-bold text-white bg-[#191771] rounded-lg w-1/2"
-              >
-                Login Now
-              </Link>
-            </div>
-          
+          </form>
+          <div className="flex flex-col lg:flex-row gap-4 mt-6">
+            <button
+              onClick={handleRegister}
+              type="submit"
+              className="py-3 text-3xl text-center border-none font-bold text-white bg-[#191771] rounded-lg w-full lg:w-1/2"
+            >
+              Register
+            </button>
+            <Link
+              to={"/login"}
+              className="py-3 text-3xl text-center border-none font-bold text-white bg-[#191771] rounded-lg w-full lg:w-1/2"
+            >
+              Login Now
+            </Link>
+          </div>
         </div>
       </div>
     </AuroraHero>
