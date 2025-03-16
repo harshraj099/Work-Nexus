@@ -73,7 +73,7 @@ const Register = () => {
       setPassword("");
       setPhone("");
       setRole("");
-      setIsAuthorized(true);
+      setIsAuthorized(false);
     } catch (error) {
       toast.error(error.response.data.message);
     }

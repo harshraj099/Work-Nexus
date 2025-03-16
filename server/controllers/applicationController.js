@@ -77,7 +77,7 @@ export const postApplication = catchAsyncError(async (req, res, next) => {
   });
   res.status(200).json({
     success: true,
-    message: "Application Submitted!",
+    message: "Application Submitted Successfully!",
     application,
   });
 });

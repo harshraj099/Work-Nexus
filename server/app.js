@@ -8,14 +8,12 @@ import applicationRouter from "./routes/applicationRouter.js";
 import jobRouter from "./routes/jobRouter.js";
 import { dbConnection } from "./database/dbConnection.js";
 import {errorMiddleware} from "./middlewares/error.js";
-
-
-
+import { register } from "./controllers/userController.js";
+dotenv.config();
 const app=express();
-dotenv.config({path : "./config/config.env"});
-
+// console.log(process.env.MONGO_URI);
 app.use(cors({
-    origin:[process.env.FRONTEND_URL],
+    origin:[process.env.FRONTEND_URL,"http://localhost:5173"],
     methods:['GET', 'POST','DELETE','PUT'],
     credentials:true,
 }))
@@ -33,6 +31,7 @@ app.use(fileUpload({
 app.use("/api/v1/user",userRouter);
 app.use("/api/v1/application",applicationRouter);
 app.use("/api/v1/job",jobRouter);
+
 
 dbConnection();
 app.use(errorMiddleware);
